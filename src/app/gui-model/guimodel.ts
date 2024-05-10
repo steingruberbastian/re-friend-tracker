@@ -186,6 +186,13 @@ export class GuiModel {
                             "color": "wisteria",
                             "page": "groupspage",
                         },
+                        {
+                            "type": "button",
+                            "name": "Activities",
+                            "icon": "fa-shower",
+                            "color": "red",
+                            "page": "activitiespage",
+                        }
                     ]
                 },
                 {
@@ -266,6 +273,33 @@ export class GuiModel {
                         "url": "/group",
                         "form": {
                         "form": "GroupForm"
+                        }
+                    }
+                    ]
+                },
+                {
+                    "id": "activitiespage",
+                    "elementList": [
+                    {
+                    "type": "backbutton",
+                    },
+                    {
+                    "type": "newButton",
+                    "name": "NewActivity",
+                    "icon": "fa-weixin",
+                    "color": "green",
+                    "form": {
+                    "form": "ActivityForm"
+                    }
+                    },
+                    {
+                        "type": "list",
+                        "icon": "fa-weixin",
+                        "color": "wisteria",
+                        "search": true,
+                        "url": "/activity",
+                        "form": {
+                        "form": "ActivityForm"
                         }
                     }
                     ]
