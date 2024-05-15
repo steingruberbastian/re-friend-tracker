@@ -105,18 +105,32 @@ export class GuiModel {
                     ]
                 },
                 {
-                    "id": "AddActivityForm",
+                    "id": "ActivityForm",
                     "title": "Activity",
-                    "url": "/friend/:friendKey/activity",
+                    "url": "/activity",
                     "formFieldList": [
                         {
-                            "id":   "activity",
-                            "type": "autocomplete",
+                            "id": "name",
+                            "type": "text",
                             "name": "Activity",
-                            "url": "/activity",
-                            "defaultKey": "activityKey",
-                            "readonly": true,
+                            "width": 2,
+                            "required": true
+                        },
+                        {
+                            "id":   "location",
+                            "type": "autocomplete",
+                            "name": "Location",
+                            "url": "/location",
+                            "form": "LocationForm",
+                            "width": 2
+                        },
+                        {
+                            "id":   "friends",
+                            "type": "autocomplete",
+                            "name": "Friends",
+                            "url": "/activity/:activityKey/friend",
                             "form": "ActivityForm",
+                            "readonly": true,
                             "width": 2
                         },
                         {
@@ -139,23 +153,23 @@ export class GuiModel {
                     "url": "/group",
                     "formFieldList": [
                     {
-                    "id": "name",
-                    "type": "text",
-                    "name": "GroupName",
-                    "width": 2,
-                    "required": true
+                        "id": "name",
+                        "type": "text",
+                        "name": "GroupName",
+                        "width": 2,
+                        "required": true
                     },
                     {
-                    "type": "deleteButton",
-                    "name": "Delete"
+                        "type": "deleteButton",
+                        "name": "Delete"
                     },
                     {
-                    "type": "cancelButton",
-                    "name": "Cancel"
+                        "type": "cancelButton",
+                        "name": "Cancel"
                     },
                     {
-                    "type": "okButton",
-                    "name": "Ok"
+                        "type": "okButton",
+                        "name": "Ok"
                     }
                     ]
                 }
