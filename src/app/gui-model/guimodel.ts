@@ -312,8 +312,33 @@ export class GuiModel {
                         "color": "wisteria",
                         "search": true,
                         "url": "/activity",
+                        "page": "detailactivitiespage"
+                    }
+                    ]
+                },
+                {
+                    "id": "detailactivitiespage",
+                    "elementList": [
+                    {
+                    "type": "backbutton",
+                    },
+                    {
+                    "type": "newButton",
+                    "name": "EditActivity",
+                    "icon": "fa-weixin",
+                    "color": "green",
+                    "form": {
+                    "form": "ActivityForm"
+                    }
+                    },
+                    {
+                        "type": "list",
+                        "icon": "fa-weixin",
+                        "color": "wisteria",
+                        "search": true,
+                        "url": "/activity/:activityKey/friend",
                         "form": {
-                        "form": "ActivityForm"
+                        "form": "FriendForm"
                         }
                     }
                     ]
