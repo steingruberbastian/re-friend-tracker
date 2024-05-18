@@ -125,15 +125,6 @@ export class GuiModel {
                             "width": 2
                         },
                         {
-                            "id":   "friends",
-                            "type": "autocomplete",
-                            "name": "Friends",
-                            "url": "/activity/:activityKey/friend",
-                            "form": "ActivityForm",
-                            "readonly": true,
-                            "width": 2
-                        },
-                        {
                             "type": "deleteButton",
                             "name": "Delete"
                         },
@@ -158,6 +149,33 @@ export class GuiModel {
                         "name": "GroupName",
                         "width": 2,
                         "required": true
+                    },
+                    {
+                        "type": "deleteButton",
+                        "name": "Delete"
+                    },
+                    {
+                        "type": "cancelButton",
+                        "name": "Cancel"
+                    },
+                    {
+                        "type": "okButton",
+                        "name": "Ok"
+                    }
+                    ]
+                },
+                {
+                    "id": "SearchFriendForm",
+                    "title": "SearchFriend",
+                    "url": "/friend",
+                    "formFieldList": [
+                    {
+                        "id":   "searchFriend",
+                        "type": "autocomplete",
+                        "name": "Friend",
+                        "url": "/friend",
+                        "form": "FriendForm",
+                        "width": 2
                     },
                     {
                         "type": "deleteButton",
@@ -320,17 +338,26 @@ export class GuiModel {
                     "id": "detailactivitiespage",
                     "elementList": [
                     {
-                    "type": "backbutton",
+                        "type": "backbutton",
                     },
                     {
-                    "type": "newButton",
-                    "name": "EditActivity",
-                    "icon": "fa-weixin",
-                    "color": "green",
-                    "form": {
-                    "form": "ActivityForm"
-                    }
+                        "type": "button",
+                        "name": "EditActivity",
+                        "icon": "fa-weixin",
+                        "color": "green",
+                        "form": {
+                            "form": "ActivityForm"
+                        }
                     },
+                    {
+                        "type": "button",
+                        "name": "AddFriend",
+                        "icon": "fa-weixin",
+                        "color": "orange",
+                        "form": {
+                            "form": "SearchFriendForm"
+                        }
+                        },
                     {
                         "type": "list",
                         "icon": "fa-weixin",
